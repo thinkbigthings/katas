@@ -12,8 +12,7 @@ public class ClockTest {
    
    private static final double TOLERANCE = 10E-2;
    
-   private ClockAngle defaultClock  = new ClockAngleDefault();
-   private ClockAngle precomputedClock = new ClockAnglePreComputed();
+   private BasicClockAngle validatingClock  = new BasicClockAngle();
    
    private double expectedDegrees;
    private int hour;
@@ -28,16 +27,10 @@ public class ClockTest {
    }
    
    @Test
-   public void testDegreesDefault() {
-      assertEquals(expectedDegrees, defaultClock.getDegrees(hour, minute, second), TOLERANCE);
+   public void testDegrees() {
+      assertEquals(expectedDegrees, validatingClock.getDegrees(hour, minute, second), TOLERANCE);
    }
   
-   @Test
-   public void testDegreesPreComputed() {
-      double computed = precomputedClock.getDegrees(hour, minute, second);
-      assertEquals(expectedDegrees, computed, TOLERANCE);
-   }
-   
     @Parameterized.Parameters
     public static Collection getTestArgs() {
        // elements of each row are: expected degrees, hour, minute

@@ -23,6 +23,6 @@ public class Clock {
      int hour = Integer.parseInt(hourMinute[0]);
      int minute = Integer.parseInt(hourMinute[1]);
      
-     return clockAngle.getDegrees(hour, minute);
+     return clockAngle.getDegrees(hour, minute, 0);
   }
 }
