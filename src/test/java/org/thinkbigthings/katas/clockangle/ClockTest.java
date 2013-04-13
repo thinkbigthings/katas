@@ -29,12 +29,12 @@ public class ClockTest {
    
    @Test
    public void testDegreesDefault() {
-      assertEquals(expectedDegrees, defaultClock.getDegrees(hour, minute, second, 0), TOLERANCE);
+      assertEquals(expectedDegrees, defaultClock.getDegrees(hour, minute, second), TOLERANCE);
    }
   
    @Test
    public void testDegreesPreComputed() {
-      double computed = precomputedClock.getDegrees(hour, minute, second, 0);
+      double computed = precomputedClock.getDegrees(hour, minute, second);
       assertEquals(expectedDegrees, computed, TOLERANCE);
    }
    
