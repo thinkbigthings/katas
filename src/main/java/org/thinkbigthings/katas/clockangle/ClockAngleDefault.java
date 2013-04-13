@@ -3,7 +3,7 @@ package org.thinkbigthings.katas.clockangle;
 public class ClockAngleDefault extends AbstractClockAngle {
 
    @Override
-   public double getDegrees(int h, int m, int s, int ms) {
+   public double getDegrees(int h, int m, int s) {
       
       // check against https://sites.google.com/site/mymathclassroom/trigonometry/clock-angle-problems/clock-angle-problems-involving-second-hands
       

@@ -9,11 +9,11 @@ public class ClockAnglePreComputed extends AbstractClockAngle {
    }
 
    @Override
-   public double getDegrees(int h, int m, int s, int ms) {
+   public double getDegrees(int h, int m, int s) {
       return degrees[h][m][s];
    }
 
-   private double calculateDegrees(int h, int m, int s, int ms) {
+   private double calculateDegrees(int h, int m, int s) {
       
       // calculate all units in degrees per second
       double md  = m*6  + s*0.1; // the minute hand goes through 6 degrees per minute plus 1/10 degree per second
@@ -29,7 +29,7 @@ public class ClockAnglePreComputed extends AbstractClockAngle {
      for(int h=0; h < 12; h++) {
         for(int m=0; m < 60; m++) {
            for(int s=0; s < 60; s++) {
-              data[h][m][s] = calculateDegrees(h, m, s, 0);
+              data[h][m][s] = calculateDegrees(h, m, s);
            }
         }
      }
