@@ -10,46 +10,50 @@ import org.junit.runners.Parameterized;
 @RunWith(Parameterized.class)
 public class ClockTest {
    
-   private static final double TOLERANCE = 10E-4;
+   private static final double TOLERANCE = 10E-2;
    
-   private ClockAngle defaultClock     = new ClockAngleNormalized();
-   private ClockAngle precomputedClock = new ClockAngleNormalized();
+   private ClockAngle defaultClock  = new ClockAngleDefault();
+   private ClockAngle precomputedClock = new ClockAnglePreComputed();
    
    private double expectedDegrees;
    private int hour;
    private int minute;
+   private int second;
    
-   public ClockTest(double d, int h, int m) {
+   public ClockTest(double d, int h, int m, int s) {
       expectedDegrees = d;
       hour = h;
       minute = m;
+      second = s;
    }
    
    @Test
    public void testDegreesDefault() {
-      assertEquals(expectedDegrees, defaultClock.getDegrees(hour, minute), TOLERANCE);
+      assertEquals(expectedDegrees, defaultClock.getDegrees(hour, minute, second, 0), TOLERANCE);
    }
   
    @Test
    public void testDegreesPreComputed() {
-      assertEquals(expectedDegrees, precomputedClock.getDegrees(hour, minute), TOLERANCE);
+      double computed = precomputedClock.getDegrees(hour, minute, second, 0);
+      assertEquals(expectedDegrees, computed, TOLERANCE);
    }
-  
+   
     @Parameterized.Parameters
     public static Collection getTestArgs() {
        // elements of each row are: expected degrees, hour, minute
         return Arrays.asList(new Object[][] {
-            {0,    0,  0},
-            {55,   0,  10},
-            {110,  0,  20},
-            {165,  0,  30},
-            {140,  0,  40},
-            {85,   0,  50},
-            {115,  1,  50},
-            {160,  2,  40},
-            {72.5, 7,  25},
-            {170,  10, 20},
-            {12.5, 5,  25},
+            {60.208, 3,  05, 25},
+            {0,    0,  0,  0},
+            {55,   0,  10, 0},
+            {110,  0,  20, 0},
+            {165,  0,  30, 0},
+            {140,  0,  40, 0},
+            {85,   0,  50, 0},
+            {115,  1,  50, 0},
+            {160,  2,  40, 0},
+            {72.5, 7,  25, 0},
+            {170,  10, 20, 0},
+            {12.5, 5,  25, 0}
         });
     };
 }
