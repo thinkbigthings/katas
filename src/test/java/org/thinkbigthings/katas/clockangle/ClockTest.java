@@ -12,7 +12,7 @@ public class ClockTest {
    
    private static final double TOLERANCE = 10E-2;
    
-   private BasicClockAngle validatingClock  = new BasicClockAngle();
+   private BasicClockAngle basicClock  = new BasicClockAngle();
    
    private double expectedDegrees;
    private int hour;
@@ -28,7 +28,7 @@ public class ClockTest {
    
    @Test
    public void testDegrees() {
-      assertEquals(expectedDegrees, validatingClock.getDegrees(hour, minute, second), TOLERANCE);
+      assertEquals(expectedDegrees, basicClock.getDegrees(hour, minute, second), TOLERANCE);
    }
   
     @Parameterized.Parameters

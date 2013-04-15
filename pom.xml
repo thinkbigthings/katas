@@ -24,15 +24,23 @@
     </build>
     <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+      <junit.version>4.11</junit.version>
+      <version-mockito-core>1.9.0</version-mockito-core>
   </properties>
 
   <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.11</version>
-      <scope>test</scope>
-    </dependency>
+      <dependency>
+         <groupId>junit</groupId>
+         <artifactId>junit</artifactId>
+         <version>${junit.version}</version>
+         <scope>test</scope>
+      </dependency>
+      <dependency>
+         <groupId>org.mockito</groupId>
+         <artifactId>mockito-core</artifactId>
+         <version>${version-mockito-core}</version>
+         <scope>test</scope>
+      </dependency>
     <dependency>
         <groupId>commons-lang</groupId>
         <artifactId>commons-lang</artifactId>
