@@ -22,9 +22,10 @@ public class ClockCacheTest {
    }
    
    @Test
-   public void testCacheOverrite() {
+   public void testCacheLimit() {
       cacheClock.getDegrees(3, 5, 25);
       cacheClock.getDegrees(0, 0, 0);
+      cacheClock.getDegrees(3, 5, 25);
       cacheClock.getDegrees(3, 5, 25);
       
       verify(mockClock, times(2)).getDegrees(3,5,25);
