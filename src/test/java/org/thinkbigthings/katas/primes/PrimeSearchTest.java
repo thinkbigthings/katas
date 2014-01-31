@@ -1,5 +1,7 @@
+package org.thinkbigthings.katas.primes;
 
-package org.thinkbigthings.katas.anagram.primes;
+
+
 
 import java.util.Arrays;
 import java.util.List;
