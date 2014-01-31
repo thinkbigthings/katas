@@ -10,18 +10,6 @@ import org.thinkbigthings.katas.primes.PrimeSearchSieveOfEratosthenes;
 
 public class PrimeSearchTest {
 
-
-//    @Test
-//    public void calculateBigIntegerPrimes() {
-//
-//        PrimeNumbers prime = new PrimeNumbers();
-//
-//        List<BigInteger> knownPrimes = Arrays.asList(new BigInteger("2"), new BigInteger("3"));
-//        List<BigInteger> foundPrimes = prime.getAllPrimes(new BigInteger("4"));
-//        Assert.assertEquals("found number of primes was incorrect", knownPrimes.size(), foundPrimes.size());
-//        Assert.assertEquals("found primes are not correct", knownPrimes, foundPrimes);
-//    }
-
     @Test
     public void calculatePrimes() {
 
@@ -32,17 +20,5 @@ public class PrimeSearchTest {
 
         Assert.assertEquals(knownPrimes, foundPrimes);
     }
-
-//    @Test
-//    public void isBigIntegerPrime() {
-//
-//        PrimeNumbers prime = new PrimeNumbers();
-//
-//        Assert.assertTrue(prime.isPrime(new BigInteger("11")));
-//        Assert.assertTrue(prime.isPrime(new BigInteger("49999991")));
-//
-//        Assert.assertFalse(prime.isPrime(new BigInteger("111")));
-//        Assert.assertFalse(prime.isPrime(new BigInteger("49999999")));
-//    }
 
 }
