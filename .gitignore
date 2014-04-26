@@ -1,2 +1,12 @@
 /target/
 /build/
+/.nb-gradle/private/
+.gradle/
+.nb-gradle-properties
+.nb-gradle/
+
+# intellij idea files
+.idea
+*.iml
+^-
+
