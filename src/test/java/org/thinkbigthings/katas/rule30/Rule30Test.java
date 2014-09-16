@@ -35,20 +35,12 @@ public class Rule30Test {
         }
     }
 
-//    public static void print(boolean[] row) {
-//        for(boolean r : row) {
-//            System.out.print(r ? "X" : "_");
-//        }
-//        System.out.println();
-//    }
-
     @Test
     public void testRule() throws Exception {
 
         boolean[] row = initial;
 
         for(int i=0; i < 5; i++) {
-//            print(row);
             Assert.assertTrue(Arrays.equals(expected[i], row));
             row = rule.mapRow(row);
         }
