@@ -11,7 +11,18 @@ public class HashMapTest {
     private SimpleMap map = new BetterHashMap<>();
     
     @Test
-    public void testPutAndGet() throws Exception {
+    public void testRemove() throws Exception {
+        
+        assertNull(map.get("1"));
+        
+        map.put("1", "apples");
+        map.remove("1");
+        
+        assertNull(map.get("1"));
+    }
+    
+    @Test
+    public void testGet() throws Exception {
         
         assertNull(map.get("1"));
         
@@ -21,7 +32,7 @@ public class HashMapTest {
     }
     
     @Test
-    public void testPutReplaces() throws Exception {
+    public void testReplaces() throws Exception {
         
         assertNull(map.get("1"));
         

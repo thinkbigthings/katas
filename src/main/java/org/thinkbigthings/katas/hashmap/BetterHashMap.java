@@ -14,8 +14,8 @@ import java.util.LinkedList;
  */
 public class BetterHashMap<K, V> implements SimpleMap<K,V> {
     
-    private LinkedList<Entry<K,V>>[] elements;
-    private Entry<K,V> NULL_ENTRY = new Entry(null, null);
+    private final LinkedList<Entry<K,V>>[] elements;
+    private final Entry<K,V> NULL_ENTRY = new Entry(null, null);
     
     public BetterHashMap() {
         elements = new LinkedList[16];
