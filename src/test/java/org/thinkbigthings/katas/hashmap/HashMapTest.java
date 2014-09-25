@@ -1,6 +1,9 @@
 package org.thinkbigthings.katas.hashmap;
 
+import nl.jqno.equalsverifier.EqualsVerifier;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNull;
 
 import static org.junit.Assert.assertNull;
 
@@ -9,6 +12,11 @@ import org.junit.Test;
 public class HashMapTest {
 
     private SimpleMap map = new BetterHashMap<>();
+    
+    @Test
+    public void equalsContract() {
+        EqualsVerifier.forClass(ConstantHash.class).verify();
+    }
     
     @Test
     public void testRemove() throws Exception {

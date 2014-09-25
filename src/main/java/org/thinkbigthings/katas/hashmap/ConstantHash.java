@@ -1,7 +1,7 @@
 
 package org.thinkbigthings.katas.hashmap;
 
-class ConstantHash {
+public final class ConstantHash {
 
     @Override
     public int hashCode() {
