@@ -14,7 +14,7 @@ public class Rule30 {
     }
 
     // white == off == false
-    // requires boolean of length 3
+    // requires boolean array of length 3
     // int p is position, the center of what we can think of as a 3-element subarray
     private boolean map(boolean[] t, int p) {
         if( ! t[p-1] && ! t[p] && ! t[p+1]) {
